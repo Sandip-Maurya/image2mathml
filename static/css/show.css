@@ -1,0 +1,58 @@
+body {
+  background-color: rgba(234, 250, 241, 0.5);
+}
+
+h2, h3, #mathml-code-div {
+  text-align: center;
+}
+
+textarea {
+  width: 800px;
+  height: auto;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+#button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  padding: 9px 22px;
+  font-size: 15px;
+  height: 40px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  background: rgba(50, 70, 249, 1);
+  border-radius: 50px;
+  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.button:hover {
+  box-shadow: 0 0 0 0.15rem #5ceace;
+}
+
+#preview-box {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+#mathml-preview {
+  width: 800px;
+  height: auto;
+  padding: 1rem;
+  border: 2px solid yellowgreen;
+  border-radius: 0.8rem;
+}
+
+#show-image {
+  text-align: center;
+}

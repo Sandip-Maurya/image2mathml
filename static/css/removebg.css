@@ -1,0 +1,48 @@
+h3, h2, h4, button {
+  text-align: center;
+}
+h4 {
+  color: cornflowerblue;
+}
+.output-img {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+}
+#output:hover {
+  box-shadow: 0 0 0 0.15rem #5ceace;
+  cursor: pointer;
+}
+
+
+img {
+  border: 2px solid yellowgreen;
+  border-radius: 4px;
+}
+
+a {
+  all: unset;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  font-size: 15px;
+  /* height: 20px; */
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  background: rgba(50, 70, 249, 0.7);
+  border-radius: 50px;
+  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.button:hover {
+  box-shadow: 0 0 0 0.15rem #5ceace;
+}

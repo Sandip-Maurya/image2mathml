@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = './css/removebg.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename = './images/favicon/favicon.png') }}"
+        type="image/x-icon">
+
+    <title>Watermark Removed</title>
+
+</head>
+
+<body>
+
+    <h3>Output Image</h3>
+    <h4>To download output image click anywhere on the image</h4>
+    <div class="output-img">
+        <a href="{{ user_image_output }}" download>
+            <img id="output" src="{{ user_image_output }}" alt="">
+        </a>
+    </div>
+
+    <div class="button-container">
+        <a href="{{url_for('homepage')}}">
+            <button class="button">Return Home</button>
+        </a>    
+    </div>
+
+    <h3>Uploaded Image</h3>
+
+    <div class="output-img">
+        <img src="{{ user_image }}" alt="">
+    </div>
+    <script src="{{ url_for('static', filename = './js/removebg.js') }}"></script>
+
+</body>

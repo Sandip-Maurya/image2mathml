@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = './css/show.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename = './images/favicon/favicon.png') }}" type="image/x-icon">
+
+    <title>Mathml code</title>
+
+</head>
+
+<body>
+    <h2>You can copy the code by clicking 'Click to Copy' button</h2>
+
+    <div id="mathml-code-div">
+        <textarea id="mathml-code">{{mathml}}</textarea>
+    </div>
+    <div id="button-container">
+        <button class="button" id="copy-btn">Click to Copy</button>
+    </div>
+
+    <div id="preview-mathml">
+        <h3>This is the output of above mathml source code.</h3>
+    </div>
+
+    <div id="preview-box">
+        <div id="mathml-preview">
+            {{mathml}}
+        </div>
+    </div>
+
+    <div id="show-image">
+        <h3>
+            Uploaded Image
+        </h3>
+        <img src="{{ user_image }}" alt="User Image" width="800px">
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='./js/show.js') }}"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+
+</html>

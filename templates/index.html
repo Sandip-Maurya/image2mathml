@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = './css/index.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename = './images/favicon/favicon.png') }}" type="image/x-icon">
+
+    <title>Image to Mathml</title>
+</head>
+
+<body>
+    <div id="header">
+        <h2>Image to Mathml Source Code Tool</h2>
+        <h3>You can input the image in three ways:</h3>
+        <ul id="list">
+            <li>Upload from local computer</li>
+            <li>Drag and Drop from local computer</li>
+            <li>Simply copy and paste image</li>
+        </ul>
+    </div>
+
+    <form id="file-upload-form" class="uploader" method="post" enctype="multipart/form-data" >
+        <div class="uploadOuter">
+            <span class="dragBox">
+                <span>Paste (Ctrl+v) or Drag and Drop or Upload Image</span>
+                <input type="file" name="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                    id="uploadFile" required/>
+            </span>
+        </div>
+
+        <div id="submit-btn-div">
+            <!-- <button class="button" id="paste-button" type="button" >Paste Copied Image</button> -->
+            <button class="button" id="submit-button" type="submit" formaction="/getcode">Get Mathml Code</button>
+            <button class="button" id="remove_bg-btn" type="submit" formaction="/removebg">Remove Watermark</button>
+        </div>
+
+    </form>
+
+    <div id="preview">
+        <img id="img-preview" src="" />
+    </div>
+    <!-- To be deleted -->    
+    <script src="{{ url_for('static', filename = './js/index.js') }}"></script>
+
+</body>
+
+</html>
