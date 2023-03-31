@@ -1,6 +1,6 @@
 ./static/images/usr_imgs/*.png
 /root/Projects/OfficeProj/sandip-image2mathml/static/images/usr_imgs/*.png
-*./png
+*.png
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
