@@ -48,6 +48,10 @@ def upload_file():
                 lat_str = img2lat_by_mathpix(full_filename)
                 # print(lat_str)
                 mathml = full_lat_converter(lat_str)
+                if 'tabular' in lat_str:
+                    lat_str = lat_str.replace('tabular', 'array')
+                    lat_str = lat_str.replace('$', '')
+
             except Exception as e:
                 return f"""
                 <h2>Problem occured in uploaded Image</h2>
@@ -56,7 +60,7 @@ def upload_file():
                 <p> The error is:    {e} </p>
                 """
 
-            return render_template("show.html", user_image=full_filename, mathml=mathml)
+            return render_template("show.html", user_image=full_filename, mathml=mathml, latex = lat_str)
 
     return render_template("error_page.html")
 

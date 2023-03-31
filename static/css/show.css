@@ -2,9 +2,15 @@ body {
   background-color: rgba(234, 250, 241, 0.5);
 }
 
-h2, h3, #mathml-code-div {
+h2, h3, #mathml-code-div, #latex-code-div{
   text-align: center;
 }
+
+#latex-code-div{
+  padding: 12px 20px;
+  margin-top: 12px;
+}
+
 
 textarea {
   width: 800px;
