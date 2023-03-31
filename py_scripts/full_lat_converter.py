@@ -84,5 +84,7 @@ def full_lat_converter(lat_str):
 
     mathml_fin += mixed_part(lat_str[temp_ind:])
     mathml_fin = mathml_fin.replace(r'<p></p>', '')
+    mathml_fin = mathml_fin.replace(r'<mi>&</mi>', '')
+    
     
     return mathml_fin

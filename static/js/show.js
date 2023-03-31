@@ -7,10 +7,19 @@ mathml_preview_elm.innerHTML = text
 // console.log(mathml_preview_elm.innerText)
 
 document.getElementById('copy-btn').addEventListener('click', e => {
-
-    mathml_code_elm.select();
+  mathml_code_elm.select();
+  if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text);
     history.back()
+
+  }
+  else{
+    // alert('Some error occured during click to copy process.')
+    document.execCommand("copy");
+    history.back()
+  }
+    
+    // history.back()
     // setTimeout(() => {
     //   history.back()
     // }, 2000)
